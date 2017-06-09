@@ -1,0 +1,47 @@
+/*
+    Close Button
+    Note: The only attributes that can vary on each case are width, height and color on .button-close.
+    Also on ::after and ::before the height to make the cross thinner.
+ */
+.close-button {
+    position: relative;
+
+    flex-shrink: 0;
+    width: rem(25);
+    height: rem(25);
+    overflow: hidden;
+
+    text-indent: -9999em;
+
+    transition: opacity 0.3s;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 45%;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+        overflow: hidden;
+
+        background-color: currentColor;
+        border-radius: 3px;
+        content: '';
+
+        transform: rotate(0deg);
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    // States
+    &:hover {
+        opacity: 0.7;
+    }
+}

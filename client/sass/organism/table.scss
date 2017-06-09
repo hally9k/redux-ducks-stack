@@ -1,0 +1,37 @@
+.rt-thead {
+    font-weight: 700;
+}
+
+.rt-th {
+    padding: 5px;
+
+    border: $color-midnight solid 1px;
+}
+
+.rt-tr {
+    display: flex;
+}
+
+.rt-td {
+    padding: 5px;
+
+    border: $color-midnight solid 1px;
+}
+
+.-pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.-center {
+    display: flex;
+}
+
+.-pageInfo {
+    display: flex;
+}
+
+
+.-loading {
+    display: none;
+}

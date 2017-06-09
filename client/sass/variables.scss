@@ -1,0 +1,106 @@
+/*
+    Variables
+    - Breakpoints (Horizontal)
+    - Asset Locations
+    - Colors
+    - Typography
+    - Widths
+    - Heights
+ */
+
+
+
+/*
+    Breakpoints
+ */
+@custom-media --to-tiny-screen-w (max-width: 400px);
+@custom-media --to-small-screen-w (max-width: 600px);
+@custom-media --to-medium-screen-w (max-width: 800px);
+@custom-media --to-normal-screen-w (max-width: 1000px);
+@custom-media --to-large-screen-w (max-width: 1200px);
+
+@custom-media --from-tiny-screen-w (min-width: 401px);
+@custom-media --from-small-screen-w (min-width: 601px);
+@custom-media --from-medium-screen-w (min-width: 801px);
+@custom-media --from-normal-screen-w (min-width: 1001px);
+@custom-media --from-large-screen-w (min-width: 1201px);
+
+
+
+/*
+    Asset Locations
+    - No quotes, causes issues with Webpack -
+ */
+$folder-image: /images;
+$folder-icon: /icons;
+
+
+
+/*
+    Color Naming Conventions:
+    - primary, secondary, tertiary
+    - dark, light
+    - succes, warning, error
+
+    // Lighter
+    - tint-1
+    - tint-2
+
+    // Darker
+    - shade-1
+    - shade-2
+
+    Color names generated at http://chir.ag/projects/name-that-color/
+ */
+$color-black:               rgb(0, 0, 0);
+$color-midnight:            rgb(60, 60, 60);
+$color-concrete:            rgb(230, 230, 230);
+$color-white:               rgb(255, 255, 255);
+$color-limbo:               rgb(62, 104, 204);
+$color-grass:               rgb(112, 226, 92);
+$color-tiger:               rgb(245, 162, 56);
+$color-monza:               rgb(216, 69, 77);
+
+$color-primary-tint-1:      color($color-limbo tint(20%));
+$color-primary:             $color-limbo;
+$color-primary-shade-1:     color($color-limbo shade(10%));
+
+$color-dark:                $color-black;
+$color-dark-tint-1:         $color-midnight;
+
+$color-light-shade-1:       $color-concrete;
+$color-light:               $color-white;
+
+$color-success:             $color-grass;
+$color-success-shade-1:     color($color-grass shade(10%));
+
+$color-warning:             $color-tiger;
+$color-warning-shade-1:     color($color-tiger shade(10%));
+
+$color-error:               $color-monza;
+$color-error-shade-1:       color($color-monza shade(10%));
+
+
+
+/*
+    Typography
+    - Typefaces
+    - Weights
+ */
+$font-arial: 'Arial', sans-serif;
+
+$font-primary: $font-arial;
+
+$weight-light:   300;
+$weight-regular: 400;
+$weight-bold:    500;
+
+
+
+/*
+    Widths
+ */
+$constrain-width-large:   1400;
+$constrain-width:         960;
+$constrain-width-medium:  740;
+$constrain-width-small:   600;

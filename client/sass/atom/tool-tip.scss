@@ -1,0 +1,108 @@
+/*
+    Tool tip
+ */
+.tool-tip {
+    position: relative;
+
+    .hint-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: ;
+        // height: ;
+
+        // color: ;
+
+        // background-color: ;
+        border-radius: 50%;
+
+
+        // States
+        &:hover + .message {
+            z-index: 1;
+
+            opacity: 1;
+        }
+    }
+
+    .message {
+        position: absolute;
+        z-index: -1;
+
+        // padding: ;
+
+        opacity: 0;
+
+        transition: opacity 0.2s;
+
+
+        // Types
+        &.top,
+        &.bottom {
+
+            &::before {
+                right: calc(50% - rem(4));
+
+                border-right: 4px solid transparent;
+                border-left: 4px solid transparent;
+            }
+        }
+
+        &.right,
+        &.left {
+
+            &::before {
+                top: calc(50% - rem(4));
+
+                border-top: 4px solid transparent;
+                border-bottom: 4px solid transparent;
+            }
+        }
+
+        &.top {
+
+            &::before {
+                top: rem(-4);
+
+                border-bottom: 4px solid $color-dark;
+            }
+        }
+
+        &.right {
+
+            &::before {
+                right: rem(-4);
+
+                border-left: 4px solid $color-dark;
+            }
+        }
+
+        &.bottom {
+
+            &::before {
+                bottom: rem(-4);
+
+                border-top: 4px solid $color-dark;
+            }
+        }
+
+        &.left {
+
+            &::before {
+                left: rem(-4);
+
+                border-right: 4px solid $color-dark;
+            }
+        }
+
+
+        // Elements
+        &::before {
+            position: absolute;
+
+            display: block;
+
+            content: '';
+        }
+    }
+}

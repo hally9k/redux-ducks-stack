@@ -1,0 +1,114 @@
+/*
+    Button
+ */
+button[type='button'],
+button[type='submit'] {
+    padding: 0;
+
+    line-height: 1;
+    white-space: nowrap;
+
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    appearance: none;
+}
+
+a.button {
+    line-height: 1;
+
+    text-decoration: none;
+}
+
+a.button,
+.button[type='button'],
+.button[type='submit'] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(10) rem(15);
+
+    color: $color-light;
+
+    background-color: $color-dark;
+    border: 1px solid currentColor;
+
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, opacity 0.2s;
+
+
+    // States
+    &:hover {
+        background-color: $color-dark-tint-1;
+    }
+
+    &:disabled,
+    &.is-disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+
+        opacity: 0.5;
+    }
+
+
+    // Types
+    &.block {
+        display: block;
+        width: 100%;
+    }
+
+    &.small {
+        padding: rem(6) rem(10);
+
+        font-size: rem(14);
+    }
+
+    &.large {
+        padding: rem(15) rem(30);
+
+        font-size: rem(18);
+    }
+
+    &.inverse {
+        color: $color-dark;
+
+        background-color: transparent;
+
+
+        // States
+        &:hover {
+        }
+    }
+
+
+    // Themes
+    &.primary {
+        background-color: $color-primary;
+
+
+        // States
+        &:hover {
+            background-color: $color-primary-tint-1;
+        }
+    }
+
+
+    // Elements
+    .icon {
+        display: flex;
+        align-items: center;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: space-between;
+
+
+        // Types
+        &.left {
+            margin-right: rem(10);
+        }
+
+        &.right {
+            margin-left: rem(10);
+        }
+    }
+}

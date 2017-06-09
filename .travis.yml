@@ -1,0 +1,22 @@
+language: node_js
+
+node_js:
+  - '7'
+
+before_install:
+  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  - sudo apt-get update
+  - sudo apt-get install yarn
+
+install: yarn
+
+script:
+  - yarn install
+  - yarn run lint
+  - yarn build
+
+notifications:
+  email: false
+  slack:
+    secure: Ja1TWPalr/5XzBO+w6YuCmPpcLFG6YW9BFgWpHOXUBzQwTkTf2LAFKmL4z0PBZpKkYJUg5rzV8PPoRxwTLFlPnaMGCvDLyRgN+DtjvWMAD/GodB2ovH0OxR9rHl9VwhuM02PgysV4UmRqeR3v+pIVlaEOKhQLDwBeBUnvBnM6zE2SvJVPflbNq+yqdBGYTKSNYNwOMB6954VV5uqiWtuZSQqNHTbNJxoqzxNiJmBIZOVtnMQ7tkkH9n1jbB3P1Z4WhHTkVhC5UiM+7E3cnJpUV9jQVDPfkwRpqNFv2OKG9Oq9k0PwzsMOIqvrTWRATXmndw4EvzDjEohGidWAcVzC53RQ+yzkGtZOzHE8vdo5Sm8AiN1kfZkhgMCZ+FiwPLL436SAwmFHPnOg+GgXnbx024IbzJgBF5aX+tMVzc7p1JKw2AfqJTWvXvX9ibNphtToyXp4ANvCt3Dfd4vFWiAGvIVKQN5A1O8O+COBczSAnXXoe8NaDwjCKmnANXDGe4SvXznC8yYtdp9Yb28q45RZR4LJPkCNfSsnBoF2LUrJUBLOq535jc9GPRG5cWDAyi+clL3OGHCCRRLb4G63DBWXIQIp21C7SGRScsIwSMrDNKW1iL9jTECWXtTgTwQ5XM+qASs5dfRHye7QJLxnwRP2w40JAGl+c5IKfm27Fm/vk4=

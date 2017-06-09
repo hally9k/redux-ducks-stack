@@ -1,0 +1,19 @@
+/*
+    Option
+ */
+.option {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(10);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+
+    // Elements
+    .checkbox,
+    .radio {
+        margin-right: rem(10);
+    }
+}

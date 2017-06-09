@@ -1,0 +1,34 @@
+/*
+    Message
+ */
+.status-message {
+    display: flex;
+    align-items: center;
+    padding: rem(10);
+
+    color: $color-light;
+
+    background-color: $color-dark-tint-1;
+
+
+    // Types
+    &.success {
+        background-color: $color-success;
+    }
+
+    &.warning {
+        background-color: $color-warning;
+    }
+
+    &.error {
+        background-color: $color-error;
+    }
+
+
+    // Elements
+    .icon {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: rem(5);
+    }
+}

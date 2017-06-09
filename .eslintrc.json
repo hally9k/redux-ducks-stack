@@ -1,0 +1,9 @@
+{
+    "extends": "./node_modules/front-end-scripts/.eslintrc.json",
+    "rules": {
+      "filenames/match-regex": [
+        "error",
+        "^[a-z-.]+$"
+      ]
+    }
+}

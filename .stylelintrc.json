@@ -1,0 +1,3 @@
+{
+    "extends": "./node_modules/front-end-scripts/.stylelintrc.json"
+}

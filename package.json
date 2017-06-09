@@ -1,0 +1,94 @@
+{
+  "name": "front-end-stack",
+  "version": "2.0.0",
+  "description": "Front End bootstrap to get your next project off the ground, based on Atomic Design thinking.",
+  "license": "MIT",
+  "private": true,
+  "repository": "pixelfusion/front-end-stack",
+  "homepage": "https://github.com/pixelfusion/front-end-stack#readme",
+  "author": "Te Riu Warren <te@pixelfusion.co.nz>",
+  "contributors": [
+    "Hal Smith Stevens <hal@pixelfusion.co.nz>",
+    "Tia Aoake <tia@pixelfusion.co.nz>"
+  ],
+  "bugs": {
+    "url": "https://github.com/pixelfusion/front-end-stack/issues"
+  },
+  "engines": {
+    "node": ">=7"
+  },
+  "main": "static/index.html",
+  "scripts": {
+    "build": "front-end-scripts build",
+    "watch": "front-end-scripts watch",
+    "start": "front-end-scripts start",
+    "lint": "yarn run lint-css && yarn run lint-js",
+    "lint-css": "stylelint \"client/sass/**/*.{css,scss}\" --syntax scss",
+    "lint-js": "eslint \"client/js/**/*.{js,jsx}\" --quiet --fix",
+    "precommit": "yarn run lint",
+    "prepush": "yarn test",
+    "test": "jest"
+  },
+  "jest": {
+    "testRegex": "((unit|integration)/.*|\\.(test|spec))\\.(js|jsx)$",
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/tests/**"
+    ],
+    "coverageDirectory": "tests/coverage",
+    "collectCoverage": true,
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "rootDir": "client/js/",
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-filenames": "^1.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.8.0",
+    "husky": "^0.12.0",
+    "stylelint": "^7.7.0"
+  },
+  "dependencies": {
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
+    "babel-polyfill": "^6.20.0",
+    "deepfreeze": "^2.0.0",
+    "dotenv": "^4.0.0",
+    "enzyme": "^2.7.1",
+    "front-end-scripts": "^2.0.2",
+    "immutable": "^3.8.1",
+    "jest": "^20.0.4",
+    "jest-fetch-mock": "https://github.com/hally9k/jest-fetch-mock",
+    "normalize.css": "^5.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-hot-loader": "3.0.0-beta.7",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "next",
+    "react-table": "^5.3.4",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.8.1",
+    "redux-middleware": "^0.1.21",
+    "redux-mock-store": "^1.2.3",
+    "redux-observable": "^0.14.1",
+    "redux-raven-middleware": "^1.2.0",
+    "reselect": "^2.5.4",
+    "rxjs": "^5.2.0",
+    "svg4everybody": "^2.0.3",
+    "whatwg-fetch": "^2.0.1"
+  }
+}

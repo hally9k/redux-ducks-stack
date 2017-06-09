@@ -1,0 +1,19 @@
+/*
+    Page
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+
+    min-width: 320px;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+}
